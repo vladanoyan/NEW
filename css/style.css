@@ -214,7 +214,8 @@
     {
     padding:0 0;
     border-radius: 10px;
-    overflow: hidden;
+     max-height: 300px;
+     overflow-y: auto;
     }
     .navbar-inverse
     {
@@ -247,9 +248,19 @@
     text-align: right;
     }
     }
-    @media screen and (max-width:1645px) {
+    @media screen and (max-width:1615px) {
     .navrow{
-    float: right;
+    margin-right: 120px;
+    }
+    }
+    @media screen and (max-width:1545px) {
+    .navrow{
+    margin-right: 60px;
+    }
+    }
+    @media screen and (max-width:1430px) {
+    .navrow{
+    margin-right: 10px;
     }
     }
     @media screen and (max-width:1415px) {
@@ -269,8 +280,7 @@
 
     .navrow
     {
-    margin-top: 34px;
-    margin-bottom: 34px;
+    margin-top: 80px;
     }
     .navbar-collapse.in{
     overflow:visible;
@@ -399,7 +409,7 @@
     .nav2bar
     {
     position: relative;
-    
+    padding: 0;
     }
     .nav2
     {
@@ -423,7 +433,7 @@
 
     .nav2 > li > a {
     color: #fff !important;
-    padding: 12px 30px !important;
+    padding: 12px 28px !important;
     background-color: rgba(255, 255, 255, 0.102) !important;
     text-transform: uppercase !important;
 
@@ -431,11 +441,14 @@
 
     @media (max-width: 1200px) {
     .nav2>li>a{
-    padding: 12px 19px!important;
+    padding: 12px 14px!important;
+    }
+    .btnNav2>a{
+        padding: 13px 20px !important;
     }
     }
 
-    .nav2>li>a:focus,.btnNav2>a:hover,.nav2>li>a:hover
+    .nav2>.active>a,.nav2>li>a:focus,.btnNav2>a:hover,.nav2>li>a:hover
     {
     background-color: rgba(255, 255, 255, 0.4)!important;
     }
@@ -476,7 +489,8 @@
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 95px 0;
+    padding-top: 90px;
+    padding-bottom: 90px;
     }
 
     a:hover, a:focus {
@@ -486,7 +500,7 @@
     .mainheader>img
     {
     width: 100%;
-    max-height: 600px;
+    max-height: 550px;
     object-fit: cover;
     position: relative;
     }
@@ -1431,8 +1445,8 @@
     .listing-m3 .listing-item-img-container {
     max-width: 100%;
     overflow: hidden;
-    height: 100%;
-    }
+/*    height: 100%;
+*/    }
     .listing-m3 .listing-item-img-container figcaption .lst-img-caption-bg {
     display: inline-block;
     height: 100%;
@@ -1460,8 +1474,8 @@
     }
     .listing-m3 figure.listing-item-img-container  {
     position: relative;
-    display: inline-block;
-    -webkit-box-shadow: 0 0 8px 0 rgba(0,0,0,0.4);
+/*    display: inline-block;
+*/    -webkit-box-shadow: 0 0 8px 0 rgba(0,0,0,0.4);
     -moz-box-shadow: 0 0 8px 0 rgba(0,0,0,0.4);
     box-shadow: 0 0 8px 0 rgba(0,0,0,0.4);
     top: 20px;
@@ -1899,7 +1913,7 @@
     /*GPE -GES*/
     .locationicon
     {
-    display: inline-block;
+    display: inline-flex;
     width: 35px;
     height: 35px;
     background-color: #969696;
@@ -1907,6 +1921,9 @@
     border-radius: 3px;
     text-align: center;
     cursor: pointer;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     }
     .iconsservise
     {
@@ -3348,8 +3365,8 @@
 
     .dpe-ges-block-m1-v1 a{
     border-radius: 0;
-    height: 34px;
-    width: 34px;
+    height: 34px !important;
+    width: 34px !important;
     position: relative;
     display: inline-block;
     padding: 0;
@@ -3734,7 +3751,9 @@
     .fileUpload + label:hover i {
     opacity: 0.7;
     }
-
+    .pad44{
+     padding-bottom: 44px;
+    }
     .uploadpos{
         position: absolute;
         left: 6px;
